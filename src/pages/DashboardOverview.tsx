@@ -126,6 +126,26 @@ export default function DashboardOverview() {
 
   return (
     <div className="space-y-6">
+      {/* Intent Workflow Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <a href="#/intents/einkauf-planen" className="flex items-center gap-4 bg-card border border-border border-l-4 border-l-primary rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow no-underline">
+          <IconShoppingCart size={22} className="text-primary shrink-0" />
+          <div className="flex-1 min-w-0">
+            <p className="font-semibold text-foreground text-sm">Einkauf planen & erfassen</p>
+            <p className="text-xs text-muted-foreground mt-0.5 truncate">Produkt auswählen, Einkauf protokollieren, Preisvergleich</p>
+          </div>
+          <IconChevronRight size={16} className="text-muted-foreground shrink-0" />
+        </a>
+        <a href="#/intents/verbrauch-und-statistik" className="flex items-center gap-4 bg-card border border-border border-l-4 border-l-primary rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow no-underline">
+          <IconDroplet size={22} className="text-primary shrink-0" />
+          <div className="flex-1 min-w-0">
+            <p className="font-semibold text-foreground text-sm">Verbrauch erfassen & Statistik erstellen</p>
+            <p className="text-xs text-muted-foreground mt-0.5 truncate">Verbrauch loggen, Statistik für Zeitraum berechnen</p>
+          </div>
+          <IconChevronRight size={16} className="text-muted-foreground shrink-0" />
+        </a>
+      </div>
+
       {/* Header */}
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div>

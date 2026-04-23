@@ -1,10 +1,10 @@
+import { lazy, Suspense } from 'react';
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import { ActionsProvider } from '@/context/ActionsContext';
 import { ErrorBoundary } from '@/components/ErrorBoundary';
 import { ErrorBusProvider } from '@/components/ErrorBus';
 import { Layout } from '@/components/Layout';
 import DashboardOverview from '@/pages/DashboardOverview';
-import { WorkflowPlaceholders } from '@/components/WorkflowPlaceholders';
 import AdminPage from '@/pages/AdminPage';
 import ProduktkatalogPage from '@/pages/ProduktkatalogPage';
 import BeschaffungsprotokollPage from '@/pages/BeschaffungsprotokollPage';
@@ -17,6 +17,8 @@ import PublicFormVerbrauchsstatistik from '@/pages/public/PublicForm_Verbrauchss
 // <public:imports>
 // </public:imports>
 // <custom:imports>
+const EinkaufPlanenPage = lazy(() => import('@/pages/intents/EinkaufPlanenPage'));
+const VerbrauchUndStatistikPage = lazy(() => import('@/pages/intents/VerbrauchUndStatistikPage'));
 // </custom:imports>
 
 export default function App() {
@@ -33,13 +35,15 @@ export default function App() {
               {/* <public:routes> */}
               {/* </public:routes> */}
               <Route element={<Layout />}>
-                <Route index element={<><div className="mb-8"><WorkflowPlaceholders /></div><DashboardOverview /></>} />
+                <Route index element={<DashboardOverview />} />
                 <Route path="produktkatalog" element={<ProduktkatalogPage />} />
                 <Route path="beschaffungsprotokoll" element={<BeschaffungsprotokollPage />} />
                 <Route path="verbrauchserfassung" element={<VerbrauchserfassungPage />} />
                 <Route path="verbrauchsstatistik" element={<VerbrauchsstatistikPage />} />
                 <Route path="admin" element={<AdminPage />} />
                 {/* <custom:routes> */}
+                <Route path="intents/einkauf-planen" element={<Suspense fallback={null}><EinkaufPlanenPage /></Suspense>} />
+                <Route path="intents/verbrauch-und-statistik" element={<Suspense fallback={null}><VerbrauchUndStatistikPage /></Suspense>} />
                 {/* </custom:routes> */}
               </Route>
             </Routes>
