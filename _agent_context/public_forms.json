@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "forms": [
+    {
+      "entity": "produktkatalog",
+      "app_id": "69e9e5d3c50aa0bc0dbdd1b4",
+      "path": "/rest/apps/69e9e5d3c50aa0bc0dbdd1b4/records",
+      "allowed_fields": [
+        "marke",
+        "produktname",
+        "lagenanzahl",
+        "blaetter_pro_rolle",
+        "rollen_pro_packung",
+        "preis_pro_packung",
+        "haendler",
+        "notizen_produkt"
+      ],
+      "pow": true,
+      "pow_difficulty": 50000,
+      "title": "Produktkatalog — Formular"
+    },
+    {
+      "entity": "beschaffungsprotokoll",
+      "app_id": "69e9e5d97115acc28bfe78aa",
+      "path": "/rest/apps/69e9e5d97115acc28bfe78aa/records",
+      "allowed_fields": [
+        "einkaufsdatum",
+        "eingekaufte_packungen",
+        "tatsaechlicher_preis",
+        "gesamtpreis",
+        "einkaufsort",
+        "lagerbestand_nach_einkauf",
+        "notizen_beschaffung"
+      ],
+      "pow": true,
+      "pow_difficulty": 50000,
+      "title": "Beschaffungsprotokoll — Formular"
+    },
+    {
+      "entity": "verbrauchserfassung",
+      "app_id": "69e9e5daed7b54f376491f1f",
+      "path": "/rest/apps/69e9e5daed7b54f376491f1f/records",
+      "allowed_fields": [
+        "verbrauch_datum",
+        "erfassungszeitraum",
+        "verbrauchte_rollen",
+        "anzahl_personen",
+        "nutzungskontext",
+        "notizen_verbrauch"
+      ],
+      "pow": true,
+      "pow_difficulty": 50000,
+      "title": "Verbrauchserfassung — Formular"
+    },
+    {
+      "entity": "verbrauchsstatistik",
+      "app_id": "69e9e5db336260cc4f3e835a",
+      "path": "/rest/apps/69e9e5db336260cc4f3e835a/records",
+      "allowed_fields": [
+        "zeitraum_von",
+        "zeitraum_bis",
+        "gesamtverbrauch_rollen",
+        "durchschnitt_pro_person_tag",
+        "statistik_personen",
+        "gesamtkosten",
+        "kosten_pro_rolle",
+        "kosten_pro_person_monat",
+        "effizienzeinschaetzung",
+        "optimierungsempfehlungen",
+        "notizen_statistik"
+      ],
+      "pow": true,
+      "pow_difficulty": 50000,
+      "title": "Verbrauchsstatistik — Formular"
+    }
+  ]
+}
